@@ -1,0 +1,15 @@
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: #FEBE10;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #00529F;
+    span {
+    	 display: block;
+  		 margin: 10px 2px;
+    }
+}

@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+
+#app {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	background: #eee;
+	position: relative;
+	button {
+		position: fixed;
+	    top: 15px;
+	    border: 1px solid #828282;
+	    border-radius: 8px;
+	    color: #ffffff;
+	    background-color: #FEBE10;
+	    cursor: pointer;
+	    right: 300px;
+	    padding: 7px;
+	    z-index: 2;
+	    text-shadow: 1px 1px 2px #00529F;
+	    &:hover {
+	    	color:  #FEBE10;
+		   	background-color:#00529F;
+	    }
+	}
+}
