@@ -7,9 +7,12 @@
     border-radius: 25px;
     color: white;
     font-weight: 600;
-    text-shadow: 1px 1px 2px #00529F;
+    text-shadow: 1px 1px 2px black;
     span {
     	 display: block;
   		 margin: 10px 2px;
+    }
+    &:hover {
+        box-shadow: 4px 4px 7px gray, -4px 4px 7px gray;
     }
 }

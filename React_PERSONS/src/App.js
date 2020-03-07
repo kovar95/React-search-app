@@ -124,7 +124,7 @@ class App extends Component {
 		const {name, lastName, age} = somePlayer;
 		console.log("Name: " + name + " Lastname: " + lastName + " Age: " + age);
 		if (!(name && lastName && age)) {
-			// alert("All fields must be filled !!!");
+			alert("All fields must be filled !!!");
 			this.setState({
 				form: true,
 			})
