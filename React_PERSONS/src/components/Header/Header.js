@@ -6,11 +6,12 @@ import {Logo} from '../Logo/Logo';
 class Header extends Component{
 
 	render() {
+		const {getSearched} = this.props;
 		return (
 			<header>
 				<div className="main-wrapper">
 					<Logo/>
-					<Search onDataSearch={this.props.getSearched} />
+					<Search onDataSearch={getSearched} />
 				</div>
 			</header>
 		)

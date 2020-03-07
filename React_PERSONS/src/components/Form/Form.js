@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Form.scss';
+import uuid from 'react-uuid';
 
 class Form extends Component{
 
@@ -20,35 +21,34 @@ class Form extends Component{
 	}
 
 	componentDidUpdate(){
+		const {closeForm, addNewPlayer} = this.props;
 		if (this.state.submit) {
 			const {name, lastName, age} = this.state;
 				const newPlayer = {
 					name: name,
 					lastName: lastName,
 					age: age,
+					id: uuid(),
 				}
-				this.props.addNewPlayer(newPlayer);
+				addNewPlayer(newPlayer);
 		}
-		this.props.closeForm(false);
+		closeForm(false);
 	}
 
 
 	addName(event) {
-
 		this.setState({
 			name : event.target.value,
 		})
 	}
 
 	addLastName(event) {
-
 		this.setState({
 			lastName : event.target.value,
 		})
 	}
 
 	addAge(event) {
-
 		this.setState({
 			age : event.target.value,
 		})
@@ -61,7 +61,6 @@ class Form extends Component{
 		})
 	}
 
-
 	closeForm(){
 		this.setState({
 			close: true,
@@ -72,10 +71,34 @@ class Form extends Component{
 		return (
 			<section className="form">
 				<p>Add new player</p>
-				<label className="first">Name: <input type="text" name="name" id="name" placeholder="Type name" onChange={(e) => this.addName(e)}/></label>
-				<label>Last Name: <input type="text" name="lastName" id="lastName" placeholder="Type lastname" onChange={(e) => this.addLastName(e)}/></label>
-				<label>Age: <input type="number" name="age" id="age" placeholder="Type age" onChange={(e) => this.addAge(e)}/></label>
-				<input type="submit" value="Submit" onClick={ () => this.addPlayer()}/>
+				<label className="first">Name: 
+					<input type="text" 
+						   name="name" 
+						   id="name" 
+						   placeholder="Type name" 
+						   onChange={e => this.addName(e)}
+					/>
+				</label>
+				<label>Last Name: 
+					<input type="text" 
+						   name="lastName" 
+						   id="lastName" 
+						   placeholder="Type lastname" 
+						   onChange={e => this.addLastName(e)}
+				    />
+				</label>
+				<label>Age: 
+					<input type="number" 
+						   name="age" 
+						   id="age" 
+						   placeholder="Type age" 
+						   onChange={ e => this.addAge(e)}
+					/>
+				</label>
+				<input type="submit" 
+					   value="Submit" 
+					   onClick={ () => this.addPlayer()}
+				/>
 				<button onClick={ () => this.closeForm()}>X</button>
 			</section>
 		)

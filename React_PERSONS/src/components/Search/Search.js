@@ -17,24 +17,25 @@ class Search extends Component {
 
 	componentDidUpdate(){
 		const {onDataSearch} = this.props;
-		onDataSearch(this.state.searchedTerm);
+		const {searchedTerm} = this.state;
+		onDataSearch(searchedTerm);
 	}
 
 	addValue(event) {
-
 		this.setState({
 			searchedTerm : event.target.value,
 		})
 	}
 
 	render() {
+		const {searchedTerm} = this.state;
 		return(
 			<section  className="search" >
 				<input type="text" 
-					   value={this.state.searchedTerm}
+					   value={searchedTerm}
 					   placeholder="Search" 
 					   name="Search" 
-					   onChange={(e) => this.addValue(e)} 
+					   onChange={ e => this.addValue(e)} 
 				/>
 			</section>
 		)

@@ -13,21 +13,40 @@ body {
 	margin: 0;
 	background: #eee;
 	position: relative;
-	button {
-		position: fixed;
-	    top: 15px;
-	    border: 1px solid #828282;
-	    border-radius: 8px;
-	    color: #ffffff;
-	    background-color: #FEBE10;
-	    cursor: pointer;
-	    right: 300px;
-	    padding: 7px;
-	    z-index: 2;
-	    text-shadow: 1px 1px 2px #00529F;
-	    &:hover {
-	    	color:  #FEBE10;
-		   	background-color:#00529F;
-	    }
+	button{
+		&.add {
+		    position: fixed;
+		    top: 15px;
+		    border: 1px solid #000000;
+		    border-radius: 8px;
+		    color: #ffffff;
+		    background-color: #000000;
+		    cursor: pointer;
+		    right: 300px;
+		    padding: 7px;
+		    z-index: 2;
+		    box-shadow: inset -2px -2px 4px gray;
+		    &:hover {
+		    	color:  #000000;
+			   	background-color: #ffffff;
+			   	box-shadow: inset 2px 2px 4px gray;
+		    }	
+		}
+		&.sort {
+		    position: fixed;
+		    top: 19px;
+		    left: 23px;
+		    z-index: 4;
+		    padding: 4px 20px;
+		    border-radius: 7px;
+		    border: 1px solid black;
+		    cursor: pointer;
+		    outline: none;
+		    &:hover {
+		    	border: 1px solid gray;
+		    	color: white;
+		    	background-color: black;
+		    }
+		}
 	}
 }
