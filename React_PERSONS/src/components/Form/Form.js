@@ -69,6 +69,7 @@ class Form extends Component{
 
 	render() {
 		return (
+			<div>
 			<section className="form">
 				<p>Add new player</p>
 				<label className="first">Name: 
@@ -101,6 +102,7 @@ class Form extends Component{
 				/>
 				<button onClick={ () => this.closeForm()}>X</button>
 			</section>
+			</div>
 		)
 	}
 }

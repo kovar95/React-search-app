@@ -219,18 +219,19 @@ class App extends Component {
 	}
 
 	render() {
+		const {form} = this.state;
 		return (
 			<Fragment>
-				<Header  getSearched={(text) => this.dataSearch(text)} />
-				<Cards players={this.state.filteredData} 
-					   onDelete={someId => this.onDelete(someId)} 
-					   onDouble={someId => this.onDouble(someId)}  
-				/>
-				{this.state.form && <Form  addNewPlayer={ player => this.addPlayer(player)} 
+				<Header  getSearched={(text) => this.dataSearch(text)} openForm={() => this.openForm()}/>
+				{!form &&   <Cards players={this.state.filteredData} 
+							   onDelete={someId => this.onDelete(someId)} 
+							   onDouble={someId => this.onDouble(someId)}  
+							/>
+				}
+				{form && <Form  addNewPlayer={ player => this.addPlayer(player)} 
 										   closeForm={ (value) => this.closeForm(value)}
 									/>
 				}
-				<button className="add" onClick={() => this.openForm()}>Add Player</button>
 				<button className="sort" onClick={ () => this.sort()}>Sort</button>
 			</Fragment>
 		)

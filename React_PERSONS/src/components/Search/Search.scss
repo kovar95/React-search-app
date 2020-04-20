@@ -3,6 +3,7 @@
 	display: flex;
 	max-width: 400px;
 	width: 100%;
+	position: relative;
 	input {
 		width: 100%;
 		height: 30px;
@@ -10,5 +11,56 @@
 		outline: none;
 		border-radius: 10px;
 	    border: 1px solid black;
+	}
+	button{
+		&.add {
+		    position: absolute;
+		    border: 1px solid #000000;
+		    border-radius: 8px;
+		    color: white;
+		    text-shadow: 1px 1px 2px black;
+		    background-color:  #1CB5E0;
+		    cursor: pointer;
+		    right: -100px;
+		    padding: 7px;
+		    z-index: 2;
+		    box-shadow: inset -2px -2px 4px gray;
+		    font-weight: bold;
+		    outline: none;
+		    &:hover {
+		    	color: #2e2e5a;
+			   	box-shadow: inset 2px 2px 4px gray;
+			   	border: 1px solid white;
+			   	text-shadow: none;
+		    }	
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.search {
+		width: 200px;
+		right: 180px;
+	}
+}
+
+
+@media screen and (max-width: 730px) {
+	.search {
+		right: 44px;
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	.search {
+		input {
+		    width: 80%;
+		}
+		button {
+			&.add {
+			    right: -50px;
+			}
+		}
 	}
 }

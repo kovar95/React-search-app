@@ -1,5 +1,4 @@
 .cards {
-    background-color: #dadcdd;
     height: 100%;
     max-width: 1000px;
     width: 100%;
@@ -8,6 +7,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    box-shadow: 5px 5px 15px, -5px 5px 15px;
-    border-radius: 0 0 20px 20px;
+}
+
+@media screen and (max-width: 730px) {
+	.cards {
+		margin: 100px auto;
+	}
 }

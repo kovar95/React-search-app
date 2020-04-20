@@ -1,12 +1,12 @@
 
 section {
     &.form {
-        position: fixed;
-        top: 100px;
-        left: 534px;
+        position: relative;
+        top: 120px;
+        margin: 0 auto;
         width: 450px;
         height: 430px;
-        background-color: #e9e0e0;
+        background: linear-gradient(-45deg, #1CB5E0, #000046);
         padding: 10px;
         display: flex;
         flex-wrap: wrap;
@@ -22,7 +22,6 @@ section {
             cursor: pointer;
             right: 10px;
             padding: 7px;
-            left: 402px;
             border-radius: 9px;
             &:hover {
                 background-color: red;
@@ -37,12 +36,13 @@ section {
             border-radius: 10px 10px 0 0;
             margin: 0;
             padding: 15px;
-            background-color: gray;
+            background: linear-gradient(-45deg, #000046, #1CB5E0);
             width: 100%;
             text-align: center;
             color: white;
             font-size: 18px;
             text-shadow: 1px 1px 2px black;
+            border-bottom: 1px solid white;
         }
         label {
             width: 100%;
@@ -51,6 +51,8 @@ section {
             margin: 35px 5px;
             display: flex;
             justify-content: flex-end;
+            color: white;
+            text-shadow: 1px 1px 2px black;
             &.first{
                 margin-top: 70px;
             }
@@ -74,14 +76,41 @@ input[type="submit"]{
     width: 100px;
     text-transform: uppercase;
     border-radius: 10px;
-    background-color: gray;
+    background-color: #1CB5E0;
     color: white;
     text-shadow: 1px 1px 2px black;
+    cursor: pointer;
     &:hover {
-        background-color: #e9e0e0;;
-        color: black;
+        background-color: #000046;
         text-shadow: none;
     }
 }
 
 
+@media screen and (max-width: 730px) {
+    section {
+        &.form {
+            width: 290px;
+            height: 272px;
+            p {
+                font-size: 12px;
+            }
+            label {
+                font-size: 13px;
+                flex-direction: column;
+                margin: 10px 5px;
+                input {
+                    width: 90%;
+                }
+            }
+            button {
+                top: 5px;
+            }
+        }
+    }
+    
+    input[type="submit"]{
+        padding: 5px;
+        width: 70px;
+    }
+}

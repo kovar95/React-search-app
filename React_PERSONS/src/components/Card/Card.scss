@@ -7,13 +7,13 @@
     margin: 20px;
     padding: 20px;
     border-radius: 25px;
-    color: #bebebe;
+    color: white;
     font-weight: 600;
     text-shadow: 0.5px 0.5px 1px black;
-    background-color: #fff9f9;
+    background: linear-gradient(-135deg, #000046, #1CB5E0);
     border: 1px solid #bebebe;
     &:hover {
-        box-shadow: 4px 4px 7px gray, -4px 4px 7px gray;
+        box-shadow: 4px 4px 7px white, -4px 4px 7px white;
     }
     span {
     	 display: block;
@@ -58,5 +58,13 @@
                 width: 100px;
             }
        }
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .card {
+        width: 150px;
+        height: 150px;
+        font-size: 12px;
     }
 }

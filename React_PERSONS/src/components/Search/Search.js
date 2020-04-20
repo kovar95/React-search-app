@@ -29,6 +29,7 @@ class Search extends Component {
 
 	render() {
 		const {searchedTerm} = this.state;
+		const {openForm} = this.props;
 		return(
 			<section  className="search" >
 				<input type="text" 
@@ -37,6 +38,7 @@ class Search extends Component {
 					   name="Search" 
 					   onChange={ e => this.addValue(e)} 
 				/>
+				<button className="add" onClick={() => openForm()}>Add Player</button>
 			</section>
 		)
 	}
